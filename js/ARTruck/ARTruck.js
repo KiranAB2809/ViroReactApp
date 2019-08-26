@@ -34,6 +34,9 @@ var ARTruck = createReactClass({
                         width={2}
                         loop={true}
                         position={[0, 2, -5]}
+                        dragType={FixedToWorld}
+                        paused={this.pauseUpdates}
+                        play={this.playAnim
                     />
                 </ViroARImageMarker>
             </ViroARScene>
@@ -56,7 +59,7 @@ var ARTruck = createReactClass({
 });
 
 ViroARTrackingTargets.createTargets({
-    poster: {
+    "poster": {
         source: require('./res/Cab_tilt_down_First_Frame.png'),
         orientation: "Up",
         physicalWidth: 0.6096 // real world width in meters
